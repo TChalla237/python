@@ -1,4 +1,6 @@
 #!/usr/bin/python3.1
+#!/usr/bin/env python
+# coding: utf-8
 
 #print ("Salut les gens")
 
@@ -210,4 +212,81 @@ def exo01():
 		print
 '''
 
+
+#Modules et packages
+
+'''
+#func.py (nom du fichier)
+def addition(a,b):
+	return a+b
+
+#script.py (nom du fichier)
+
+from func import *
+print(addition(5,10))
+
+'''
+
+# Modules : un fichier qui comprend plusieurs fonctions
+
+# Package : Ensemble de module
+
+#TRY
+'''
+a = 1 
+b= 0
+try: 
+	a/b
+	print("ok")
+except:
+	print("Error")
+
+'''
+#Programmation orientée Objets / Classes
+'''
+class Voiture:
+	def __init__(self):
+		self.nom="Ferrari"
+
+ma_voiture = Voiture() #Instantiation : creation objet par une class
+print(ma_voiture.nom)
+
+
+#Fonction dans une classe n'est pas une fonction mais une METHODE
+'''
+
+
+#Encodage 
+ #chaque debut de script : 
+ #!/usr/bin/env python
+ # coding: utf-8
+
+#PIP (equivalent apt-get pour python)
+
+
+#Socket 
+
+#Point d'entrée sur un réseau
+'''
+import socket
+
+ip = socket.gethostbyname(socket.gethostname()) #ip local de la machine
+
+print(ip)
+'''
+'''
+import os
+
+subnet = "192.168.0."
+
+for i in range(1,255):
+	hostname = subnet + str(i)
+	response = os.system("ping -n 1 " + hostname)
+	if response == 0:
+		print(hostname, 'is up!')
+
+'''
+
+
+#Machine learning !!
 
